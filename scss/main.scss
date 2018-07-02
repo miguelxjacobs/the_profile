@@ -1,0 +1,261 @@
+/* Styled by MIGUEL JACOBS */
+
+/* Font Import */
+@font-face {
+    font-family: denseFont;
+    src: url('../fonts/roboto.light.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: .5s;
+}
+
+h1, h2, h3 {
+    font-family: 'denseFont';
+}
+
+/* Intro */
+.welcome {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    background-image: url(../images/webdev_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    #caption {
+        width: 300px;
+        position: absolute;
+        text-align: right;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
+        padding: 5px 0;
+        .header {
+            font-size: 1.4em;
+            padding: 10px;
+        }
+        .slogan {
+            font-size: .7em;
+            letter-spacing: .4em;
+            padding: 5px 5px 20px 5px;
+        }
+        #view, #contact {
+            width: 100px;
+            height: 40px;
+            outline: 0;
+            border: 1px solid black;
+            background-color: transparent;
+            border-radius: 3px;
+            margin-right: 10px;
+            &:hover {
+                cursor: pointer;
+                background-color: rgba(0,0,0, 0.5);
+            }
+        }
+        #view {
+            background-color: rgba(0,0,0, 0.3);
+        }
+    }
+}
+
+/* Personal Statement */
+.personal {
+    display: grid;
+    grid-template-columns: auto 80% auto;
+    padding: 65px 0;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255,255,255, 0.5);
+    h3 {
+        grid-column: 2/3;
+        display: inline-block;
+        padding: 10px 0;
+        font-size: 1.4em;
+    }
+    hr {
+        grid-column: 2/3;
+        height: 1px;
+        width: 100px;
+        padding: 0;
+        background-color: rgb(27, 27, 129);
+        border: none;
+        margin: auto;
+    }  
+    p {
+        grid-column: 2/3;
+        padding: 10px 0;
+        font-size: .9em;
+        line-height: 20px;
+        strong {
+            color: rgb(27, 27, 129);
+        }
+    }
+    &:hover hr {
+        width: 200px;
+    }
+}
+
+/* Projects */
+.projects {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    border-top: 1px solid rgba(0,0,0, 0.4);
+    // background-image: url(../images/webdev_bg.jpg);
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+    // background-size: cover;
+    // background-position: center;
+    h2 {
+        text-align: center;
+        padding: 65px;
+    }
+    hr {
+        width: 100px;
+        margin: auto;
+        background-color: rgb(27, 27, 129);
+        height: 1px;
+        border: none;
+    }
+    .project {
+        text-align: center;
+        .logo {
+            width: 100px;
+            height: 100px;
+            padding: 30px;
+            margin: auto;
+            img {                
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .name {
+            margin: auto;
+            width: 100%;
+            p {                
+                padding: 10px;
+                a {
+                    text-decoration: none;
+                    color: black;
+                    &:hover {
+                        color: rgb(27, 27, 129);
+                    }
+                }
+            }
+        }
+        .about {
+            margin: auto;
+            width: 100%;
+            p {
+                padding: 20px 50px 50px 50px;
+            }
+        }
+    }
+    .outdoor_adventures {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .code4ct {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        .logo {
+            height: 40px;
+        }
+    }
+    .sabc {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    .unknown {
+        grid-column: 1/2;
+        grid-row: 4/5;
+        img {            
+            border-radius: 50%;
+        }
+    }
+    &:hover hr {
+        width: 200px;
+    }
+}
+
+
+.carousel_wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: 100px;
+    overflow: hidden;
+    .carousel {
+        height: 100%;
+        width: 100%;
+        margin: auto;
+        @keyframes carousel {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-3000px);
+            }
+        }
+        #carousel {
+            width: 9999px;
+            height: 100%;
+            background-image: url(../images/footer/carousel.png);
+            background-size: contain;
+            background-repeat: repeat-x;
+            animation: carousel 60s linear infinite;
+        }
+    }
+}
+
+/* Footer Wrapper */
+.footer_wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: 200px;
+    background-image: url(../images/webdev_bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    .links {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        background-color: rgba(0,0,0, 0.9);
+        .social {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            width: 300px;
+            padding: 10px 5px 5px;
+            margin: auto;
+        }
+        a {
+            grid-column: 1/2;
+            padding-right: 10px;
+            text-align: end;
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+        span {
+            grid-column: 2/3;
+            a {                    
+                text-decoration: none;
+                color: rgba(255,255,255, 0.4);
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+}

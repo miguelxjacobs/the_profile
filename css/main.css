@@ -1,0 +1,206 @@
+/* Styled by MIGUEL JACOBS */
+/* Font Import */
+@font-face {
+  font-family: denseFont;
+  src: url("../fonts/roboto.light.ttf"); }
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: .5s; }
+
+h1, h2, h3 {
+  font-family: 'denseFont'; }
+
+/* Intro */
+.welcome {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  background-image: url(../images/webdev_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh; }
+  .welcome #caption {
+    width: 300px;
+    position: absolute;
+    text-align: right;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    padding: 5px 0; }
+    .welcome #caption .header {
+      font-size: 1.4em;
+      padding: 10px; }
+    .welcome #caption .slogan {
+      font-size: .7em;
+      letter-spacing: .4em;
+      padding: 5px 5px 20px 5px; }
+    .welcome #caption #view, .welcome #caption #contact {
+      width: 100px;
+      height: 40px;
+      outline: 0;
+      border: 1px solid black;
+      background-color: transparent;
+      border-radius: 3px;
+      margin-right: 10px; }
+      .welcome #caption #view:hover, .welcome #caption #contact:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.5); }
+    .welcome #caption #view {
+      background-color: rgba(0, 0, 0, 0.3); }
+
+/* Personal Statement */
+.personal {
+  display: grid;
+  grid-template-columns: auto 80% auto;
+  padding: 65px 0;
+  background-color: white;
+  text-align: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+  .personal h3 {
+    grid-column: 2/3;
+    display: inline-block;
+    padding: 10px 0;
+    font-size: 1.4em; }
+  .personal hr {
+    grid-column: 2/3;
+    height: 1px;
+    width: 100px;
+    padding: 0;
+    background-color: #1b1b81;
+    border: none;
+    margin: auto; }
+  .personal p {
+    grid-column: 2/3;
+    padding: 10px 0;
+    font-size: .9em;
+    line-height: 20px; }
+    .personal p strong {
+      color: #1b1b81; }
+  .personal:hover hr {
+    width: 200px; }
+
+/* Projects */
+.projects {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  border-top: 1px solid rgba(0, 0, 0, 0.4); }
+  .projects h2 {
+    text-align: center;
+    padding: 65px; }
+  .projects hr {
+    width: 100px;
+    margin: auto;
+    background-color: #1b1b81;
+    height: 1px;
+    border: none; }
+  .projects .project {
+    text-align: center; }
+    .projects .project .logo {
+      width: 100px;
+      height: 100px;
+      padding: 30px;
+      margin: auto; }
+      .projects .project .logo img {
+        width: 100%;
+        height: 100%; }
+    .projects .project .name {
+      margin: auto;
+      width: 100%; }
+      .projects .project .name p {
+        padding: 10px; }
+        .projects .project .name p a {
+          text-decoration: none;
+          color: black; }
+          .projects .project .name p a:hover {
+            color: #1b1b81; }
+    .projects .project .about {
+      margin: auto;
+      width: 100%; }
+      .projects .project .about p {
+        padding: 20px 50px 50px 50px; }
+  .projects .outdoor_adventures {
+    grid-column: 1/2;
+    grid-row: 1/2; }
+  .projects .code4ct {
+    grid-column: 1/2;
+    grid-row: 2/3; }
+    .projects .code4ct .logo {
+      height: 40px; }
+  .projects .sabc {
+    grid-column: 1/2;
+    grid-row: 3/4; }
+  .projects .unknown {
+    grid-column: 1/2;
+    grid-row: 4/5; }
+    .projects .unknown img {
+      border-radius: 50%; }
+  .projects:hover hr {
+    width: 200px; }
+
+.carousel_wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  height: 100px;
+  overflow: hidden; }
+  .carousel_wrapper .carousel {
+    height: 100%;
+    width: 100%;
+    margin: auto; }
+@keyframes carousel {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-3000px); } }
+    .carousel_wrapper .carousel #carousel {
+      width: 9999px;
+      height: 100%;
+      background-image: url(../images/footer/carousel.png);
+      background-size: contain;
+      background-repeat: repeat-x;
+      animation: carousel 60s linear infinite; }
+
+/* Footer Wrapper */
+.footer_wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  height: 200px;
+  background-image: url(../images/webdev_bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center; }
+  .footer_wrapper .links {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: rgba(0, 0, 0, 0.9); }
+    .footer_wrapper .links .social {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      width: 300px;
+      padding: 10px 5px 5px;
+      margin: auto; }
+    .footer_wrapper .links a {
+      grid-column: 1/2;
+      padding-right: 10px;
+      text-align: end; }
+      .footer_wrapper .links a img {
+        width: 20px;
+        height: 20px; }
+    .footer_wrapper .links span {
+      grid-column: 2/3; }
+      .footer_wrapper .links span a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.4); }
+        .footer_wrapper .links span a:hover {
+          color: white; }
+
+/*# sourceMappingURL=main.css.map */
