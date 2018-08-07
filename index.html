@@ -17,8 +17,13 @@
         <div id="caption">
             <h1 class="header">miguelxjacobs{</h1>
             <h3 class="slogan">Dare to Dream. Dare to Create</h3>
-            <button id="view">View Resume</button>
-            <button id="contact">Contact Me</button>
+            <button id="viewBtn">View Resume</button>
+            <button id="contactBtn">Contact Me</button>
+        </div>
+
+        <!-- Contact Modal -->
+        <div id="contact_wrapper" class="contact_modal">
+    
         </div>
     </section>
 
@@ -35,19 +40,19 @@
 
     <!-- Projects -->
     <section class="projects">
-        <h2>Projects</h2>
+        <h2>PROJECTS</h2>
         <hr>
 
         <!-- Outdoor_Adventures -->
         <div class="project outdoor_adventures">
             <section class="logo">
-                <a href="https://github.com/miguelxjacobs/outdoor_adventures">
+                <a href="https://miguelxjacobs.github.io/outdoor_adventures/index.html" target="_blank">
                     <img src="images/logos/outdoor_adventures.png" alt="" draggable="false">
                 </a>                
             </section>
             <section class="name">
                 <p>
-                    <a href="https://github.com/miguelxjacobs/outdoor_adventures">
+                    <a href="https://miguelxjacobs.github.io/outdoor_adventures/index.html" target="_blank">
                         outdoor_adventures
                     </a>
                 </p>
@@ -62,13 +67,13 @@
         <!-- Code4CT -->
         <div class="project code4ct">
             <section class="logo">
-                <a href="https://github.com/miguelxjacobs/Code4CT">
+                <a href="https://miguelxjacobs.github.io/Code4CT/index.html" target="_blank">
                     <img src="images/logos/code4ct.jpg" alt="" draggable="false">
                 </a>                
             </section>
             <section class="name">
                 <p>
-                    <a href="https://github.com/miguelxjacobs/Code4CT">
+                    <a href="https://miguelxjacobs.github.io/Code4CT/index.html" target="_blank">
                         Code4CT
                     </a>
                 </p>
@@ -80,23 +85,44 @@
             </section>
         </div>
 
-        <!-- SABC -->
-        <div class="project sabc">
+        <!-- Blog -->
+        <div class="project blog">
             <section class="logo">
-                <a href="https://github.com/miguelxjacobs">
-                    <img src="images/logos/paper_plane.png" alt="" draggable="false">
+                <a href="https://github.com/miguelxjacobs" target="_blank">
+                    <img src="images/logos/blog.png" alt="" draggable="false">
                 </a>                
             </section>
             <section class="name">
                 <p>
-                    <a href="https://github.com/miguelxjacobs">
-                        SABC
+                    <a href="https://github.com/miguelxjacobs" target="_blank">
+                        Blog
                     </a>
                 </p>
             </section>
             <section class="about">
                 <p>
-                    A mini project
+                    A mini blog based on some of my favourite games utilizing CRUD (Create, Read, Update, Delete) methods, Bootstrap and Node.js
+                </p>
+            </section>
+        </div>
+
+        <!-- Blog 2.0 -->
+        <div class="project blog">
+            <section class="logo">
+                <a href="https://github.com/miguelxjacobs" target="_blank">
+                    <img src="images/logos/blog.png" alt="" draggable="false">
+                </a>                
+            </section>
+            <section class="name">
+                <p>
+                    <a href="https://github.com/miguelxjacobs" target="_blank">
+                        Blog 2.0
+                    </a>
+                </p>
+            </section>
+            <section class="about">
+                <p>
+                    A slightly upgraded version of my blog based my favourite games implementing a login/register user page that stores data into a json file.
                 </p>
             </section>
         </div>
@@ -104,20 +130,20 @@
         <!-- Unknown -->
         <div class="project unknown">
             <section class="logo">
-                    <a href="https://github.com/miguelxjacobs/cv">
+                    <a href="https://github.com/miguelxjacobs" target="_blank">
                         <img src="images/logos/cv.jpg" alt="" draggable="false">
                     </a>                
             </section>
             <section class="name">
                 <p>
-                    <a href="https://github.com/miguelxjacobs/cv">
-                        Curriculumn Vitae
+                    <a href="https://github.com/miguelxjacobs" target="_blank">
+                        Portfolio
                     </a>
                 </p>
             </section>
             <section class="about">
                 <p>
-                    The very website you're currently viewing
+                    A link to some of my projects on github
                 </p>
             </section>
         </div>
@@ -136,7 +162,7 @@
 
         <div class="links">
             <p class="social github">
-                <a href="">
+                <a href="https://github.com/miguelxjacobs" target="_blank">
                     <img src="images/icons/github.png" alt="github">
                 </a>
                 <span>                    
@@ -146,7 +172,7 @@
                 </span>         
             </p>
             <p class="social linkedin">
-                <a href="">
+                <a href="https://www.linkedin.com/in/miguel-jacobs-8b1620143/" target="_blank">
                     <img src="images/icons/linkedin.png" alt="linkedin">
                 </a>
                 <span>                    
@@ -156,7 +182,7 @@
                 </span>
             </p>
             <p class="social stackoverflow">
-                <a href="">
+                <a href="https://stackoverflow.com/users/9569698/miguel-jacobs" target="_blank">
                     <img src="images/icons/stackoverflow.png" alt="stackoverflow">
                 </a>
                 <span>                    
@@ -166,7 +192,7 @@
                 </span>
             </p>
             <p class="social facebook">
-                <a href="">
+                <a href="https://www.facebook.com/miguel.jacobs2" target="_blank">
                     <img src="images/icons/facebook.png" alt="facebook">
                 </a>
                 <span>                    
@@ -176,7 +202,7 @@
                 </span>
             </p>
             <p class="social instagram">
-                <a href="">
+                <a href="https://www.instagram.com/miguelxjacobs/" target="_blank">
                     <img src="images/icons/instagram.png" alt="instagram">
                 </a>
                 <span>                    
@@ -187,5 +213,7 @@
             </p>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
