@@ -28,22 +28,78 @@ h1, h2, h3 {
     background-position: center;
     background-attachment: fixed;
     height: 100vh;
-    .contact_modal {
+    .xp_modal {
         display: none;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+        width: 100%;
         height: 100vh;
-        background-color: rgba(0,0,0, 0.7);
+        background-color: rgba(0,0,0, 0.5);
         z-index: 99;
-        #close {
+        margin: auto;
+        .close {
             position: absolute;
             top: 10px;
             right: 20px;
             font-size: 40px;
+            &:hover {
+                cursor: pointer;
+                text-shadow: 0 0 30px white;
+            }
+        }
+        #cv {
+            position: absolute;
+            top: 60px;
+            padding: 20px;
+            line-height: 1.5;
+            // Add background blur filter!!!
+        }
+    }
+    .contact_modal {
+        display: none;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0,0,0, 0.7);
+        z-index: 99;
+        margin: auto;
+        form {
+            width: 80%;
+            text-align: center;
+            margin: auto;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 40px;
+            &:hover {
+                cursor: pointer;
+                text-shadow: 0 0 30px white;
+            }
+        }
+        ::placeholder {
+            text-align: center;
+        }
+        input, textarea {
+            height: 35px;
+            width: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            text-align: center;
+        }
+        textarea {
+            height: 180px;
+            padding-top: 20px;
+            text-align: left;
         }
         #submitBtn {
-            height: 40px;
-            width: 100px;
+            height: 50px;
+            width: 120px;
+            background-color: transparent;
+            border: 1px solid black;
+            border-radius: 4px;
         }
     }
     #caption {
@@ -64,7 +120,7 @@ h1, h2, h3 {
             letter-spacing: .4em;
             padding: 5px 5px 20px 5px;
         }
-        #viewBtn, #contactBtn {
+        #xpBtn, #contactBtn {
             width: 100px;
             height: 40px;
             outline: 0;
@@ -237,7 +293,7 @@ h1, h2, h3 {
             background-image: url(../images/footer/carousel.png);
             background-size: contain;
             background-repeat: repeat-x;
-            animation: carousel 60s linear infinite;
+            animation: carousel 120s linear infinite;
         }
     }
 }
