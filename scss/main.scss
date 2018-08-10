@@ -79,6 +79,7 @@ h1, h2, h3 {
         background-color: rgba(0,0,0, 0.4);
         z-index: 99;
         margin: auto;
+		font-family: 'denseFont';
         form {
             width: 80%;
             text-align: center;
@@ -98,8 +99,8 @@ h1, h2, h3 {
         .heading {
             grid-column: 1/2;
             grid-row: 1/2;
-            margin: 60px auto 40px;
-            font-size: .7em;
+            margin: 80px 60px;
+            font-size: 1em;
             h5 {
                 color: rgba(0,0,0, 0.8);
                 letter-spacing: 1.5px;
