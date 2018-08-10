@@ -29,9 +29,10 @@ h1, h2, h3 {
     grid-template-rows: 1fr;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: 99;
-    margin: auto; }
+    margin: auto;
+    overflow: hidden; }
     .welcome .xp_modal .close {
       position: absolute;
       top: 10px;
@@ -41,23 +42,35 @@ h1, h2, h3 {
         cursor: pointer;
         text-shadow: 0 0 30px white; }
     .welcome .xp_modal #cv {
+      height: 70vh;
       position: absolute;
       top: 60px;
-      padding: 20px;
-      line-height: 1.5; }
+      padding: 0 20px 20px;
+      line-height: 1.7;
+      font-size: .8em;
+      overflow-x: scroll; }
+      .welcome .xp_modal #cv .edu {
+        padding: 0; }
+      .welcome .xp_modal #cv .dets {
+        padding-top: 10px; }
+      .welcome .xp_modal #cv .right {
+        text-align: right; }
+      .welcome .xp_modal #cv p {
+        font-size: .7em; }
   .welcome .contact_modal {
     display: none;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 30vh 70vh;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: 99;
     margin: auto; }
     .welcome .contact_modal form {
       width: 80%;
       text-align: center;
-      margin: auto; }
+      margin: auto;
+      padding-bottom: 15px; }
     .welcome .contact_modal .close {
       position: absolute;
       top: 10px;
@@ -66,21 +79,40 @@ h1, h2, h3 {
       .welcome .contact_modal .close:hover {
         cursor: pointer;
         text-shadow: 0 0 30px white; }
+    .welcome .contact_modal .heading {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      margin: 60px auto 40px;
+      font-size: .7em; }
+      .welcome .contact_modal .heading h5 {
+        color: rgba(0, 0, 0, 0.8);
+        letter-spacing: 1.5px; }
+      .welcome .contact_modal .heading .details {
+        padding: 5px 0 5px 5px; }
+        .welcome .contact_modal .heading .details img {
+          width: 20px;
+          height: 20px;
+          border-radius: 2.5px;
+          margin-bottom: -6.5px;
+          margin-right: 5px; }
+    .welcome .contact_modal form {
+      grid-column: 1/2;
+      grid-row: 2/3; }
     .welcome .contact_modal ::placeholder {
       text-align: center; }
     .welcome .contact_modal input, .welcome .contact_modal textarea {
-      height: 35px;
+      height: 20px;
       width: 100%;
       border: 1px solid rgba(0, 0, 0, 0.3);
       border-radius: 4px;
       text-align: center; }
     .welcome .contact_modal textarea {
-      height: 180px;
+      height: 160px;
       padding-top: 20px;
       text-align: left; }
     .welcome .contact_modal #submitBtn {
-      height: 50px;
-      width: 120px;
+      height: 40px;
+      width: 100px;
       background-color: transparent;
       border: 1px solid black;
       border-radius: 4px; }
@@ -196,7 +228,7 @@ h1, h2, h3 {
       width: 100%; }
       .projects .project .about p {
         padding: 20px 50px 50px 50px;
-        font-size: 1.1em;
+        font-size: .8em;
         font-family: 'denseFont';
         text-shadow: 1px 2px 10px rgba(27, 27, 129, 0.95); }
   .projects .outdoor_adventures {
@@ -217,29 +249,6 @@ h1, h2, h3 {
       border-radius: 50%; }
   .projects:hover hr {
     width: 200px; }
-
-.carousel_wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  height: 100px;
-  overflow: hidden; }
-  .carousel_wrapper .carousel {
-    height: 100%;
-    width: 100%;
-    margin: auto; }
-@keyframes carousel {
-  0% {
-    transform: translateX(0); }
-  100% {
-    transform: translateX(-3000px); } }
-    .carousel_wrapper .carousel #carousel {
-      width: 9999px;
-      height: 100%;
-      background-image: url(../images/footer/carousel.png);
-      background-size: contain;
-      background-repeat: repeat-x;
-      animation: carousel 120s linear infinite; }
 
 /* Footer Wrapper */
 .footer_wrapper {
@@ -266,6 +275,7 @@ h1, h2, h3 {
     .footer_wrapper .links a {
       grid-column: 1/2;
       padding-right: 10px;
+      margin-right: -20px;
       text-align: end; }
       .footer_wrapper .links a img {
         width: 20px;
@@ -273,9 +283,140 @@ h1, h2, h3 {
     .footer_wrapper .links span {
       grid-column: 2/3; }
       .footer_wrapper .links span a {
+        display: none;
         text-decoration: none;
         color: rgba(255, 255, 255, 0.4); }
         .footer_wrapper .links span a:hover {
           color: white; }
+
+@media only screen and (min-width: 768px) {
+  .welcome .xp_modal #cv {
+    height: 80vh;
+    width: 500px;
+    margin: 0 15%;
+    font-size: 1.1em; }
+    .welcome .xp_modal #cv .dets {
+      font-size: .9em; }
+    .welcome .xp_modal #cv p {
+      font-size: .8em; }
+  .welcome .contact_modal {
+    grid-template-rows: 40vh 60vh; }
+    .welcome .contact_modal .heading {
+      margin: 200px 10% 40px;
+      font-size: .9em; }
+      .welcome .contact_modal .heading h5 {
+        font-size: 1.3em; }
+      .welcome .contact_modal .heading .details {
+        padding: 5px 0 5px 5px;
+        font-size: 1em; }
+        .welcome .contact_modal .heading .details img {
+          width: 28px;
+          height: 28px; }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto; }
+    .projects h2 {
+      grid-column: 1/3;
+      grid-row: 1/2; }
+    .projects hr {
+      grid-column: 1/3;
+      grid-row: 1/2;
+      margin-bottom: 50px; }
+    .projects .project {
+      width: 80%;
+      margin: auto; }
+    .projects .outdoor_adventures {
+      grid-column: 1/2;
+      grid-row: 2/3; }
+    .projects .code4ct {
+      grid-column: 2/3;
+      grid-row: 2/3; }
+      .projects .code4ct .logo {
+        height: 30px; }
+    .projects .blog {
+      grid-column: 1/2;
+      grid-row: 3/4; }
+    .projects .blog2 {
+      grid-column: 2/3;
+      grid-row: 3/4; }
+    .projects .unknown {
+      grid-column: 1/3;
+      grid-row: 4/5; }
+
+  .footer_wrapper .links a {
+    margin-right: 0; }
+  .footer_wrapper span a {
+    display: inline !important; } }
+@media only screen and (min-width: 1024px) {
+  .welcome .xp_modal #cv {
+    height: 80vh;
+    width: 700px;
+    margin: 0 15%;
+    font-size: 1.4em; }
+  .welcome .contact_modal {
+    grid-template-rows: 40vh 60vh; }
+    .welcome .contact_modal .heading {
+      margin: 200px 21.5% 40px;
+      font-size: .9em; }
+      .welcome .contact_modal .heading h5 {
+        font-size: 1.3em; }
+      .welcome .contact_modal .heading .details {
+        padding: 5px 0 5px 5px;
+        font-size: 1em; }
+        .welcome .contact_modal .heading .details img {
+          width: 28px;
+          height: 28px; }
+    .welcome .contact_modal input, .welcome .contact_modal textarea {
+      width: 70%; }
+
+  .projects .project {
+    width: 70%;
+    margin: auto; }
+
+  .footer_wrapper {
+    height: 80px; }
+    .footer_wrapper .links {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 1fr; }
+      .footer_wrapper .links .social {
+        width: 100px; } }
+@media only screen and (min-width: 1440px) {
+  .welcome .xp_modal #cv {
+    height: 90vh;
+    width: 1000px;
+    margin: 0 18%;
+    font-size: 1.4em; }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto; }
+    .projects h2 {
+      grid-column: 2/4; }
+    .projects hr {
+      grid-column: 2/4; }
+    .projects .project {
+      width: 100%;
+      margin: auto; }
+    .projects .outdoor_adventures {
+      grid-column: 1/2;
+      grid-row: 2/3; }
+    .projects .code4ct {
+      grid-column: 2/3;
+      grid-row: 2/3; }
+      .projects .code4ct .logo {
+        height: 30px; }
+    .projects .blog {
+      grid-column: 3/4;
+      grid-row: 2/3; }
+    .projects .blog2 {
+      grid-column: 4/5;
+      grid-row: 2/3; }
+    .projects .unknown {
+      grid-column: 2/4;
+      grid-row: 3/4; } }
 
 /*# sourceMappingURL=main.css.map */

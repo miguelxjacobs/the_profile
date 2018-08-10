@@ -1,4 +1,5 @@
-// const welcomebBg = document.getElementsByClassName('welcome')[0];
+const caption = document.getElementById('caption');
+const cvWrapper = document.getElementById('cv');
 
 // XP button
 const xpClose = document.getElementsByClassName('close')[0];
@@ -7,12 +8,13 @@ const xpWrapper = document.getElementById('xp_wrapper');
 
 xpBtn.onclick = function() {
     xpWrapper.style.display = "grid";
-    // welcomebBg.style.filter = "blur(2.5px)";
+    cvWrapper.style.filter = "none";
+    caption.style.filter = "blur(5px)";
 }
 
 xpClose.onclick = function() {
     xpWrapper.style.display = "none";
-    // welcomebBg.style.filter = "blur(0)";
+    caption.style.filter = "none";
 }
 
 // Contact button
@@ -22,8 +24,11 @@ const contactWrapper = document.getElementById('contact_wrapper');
 
 contactBtn.onclick = function() {
     contactWrapper.style.display = "grid";
+    cvWrapper.style.filter = "none";
+    caption.style.filter = "blur(5px)";
 }
 
 contactClose.onclick = function() {
     contactWrapper.style.display = "none";
+    caption.style.filter = "none";
 }
