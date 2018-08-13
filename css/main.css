@@ -96,27 +96,6 @@ h1, h2, h3 {
           border-radius: 2.5px;
           margin-bottom: -6.5px;
           margin-right: 5px; }
-    .welcome .contact_modal form {
-      grid-column: 1/2;
-      grid-row: 2/3; }
-    .welcome .contact_modal ::placeholder {
-      text-align: center; }
-    .welcome .contact_modal input, .welcome .contact_modal textarea {
-      height: 20px;
-      width: 100%;
-      border: 1px solid rgba(0, 0, 0, 0.3);
-      border-radius: 4px;
-      text-align: center; }
-    .welcome .contact_modal textarea {
-      height: 160px;
-      padding-top: 20px;
-      text-align: left; }
-    .welcome .contact_modal #submitBtn {
-      height: 40px;
-      width: 100px;
-      background-color: transparent;
-      border: 1px solid black;
-      border-radius: 4px; }
   .welcome #caption {
     width: 300px;
     position: absolute;
@@ -256,7 +235,6 @@ h1, h2, h3 {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  height: 200px;
   background-image: url(../images/webdev_bg.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -301,9 +279,9 @@ h1, h2, h3 {
     .welcome .xp_modal #cv p {
       font-size: .8em; }
   .welcome .contact_modal {
-    grid-template-rows: 40vh 60vh; }
+    grid-template-rows: 100vh; }
     .welcome .contact_modal .heading {
-      margin: 200px 10% 40px;
+      margin: auto;
       font-size: .9em; }
       .welcome .contact_modal .heading h5 {
         font-size: 1.3em; }
@@ -357,7 +335,7 @@ h1, h2, h3 {
     margin: 0 15%;
     font-size: 1.4em; }
   .welcome .contact_modal {
-    grid-template-rows: 40vh 60vh; }
+    grid-template-rows: 100vh; }
     .welcome .contact_modal .heading {
       margin: 200px 21.5% 40px;
       font-size: .9em; }
@@ -380,7 +358,7 @@ h1, h2, h3 {
     height: 80px; }
     .footer_wrapper .links {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       grid-template-rows: 1fr; }
       .footer_wrapper .links .social {
         width: 100px; } }

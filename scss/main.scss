@@ -116,32 +116,6 @@ h1, h2, h3 {
                 }
             }
         }
-        form {            
-            grid-column: 1/2;
-            grid-row: 2/3;
-        }
-        ::placeholder {
-            text-align: center;
-        }
-        input, textarea {
-            height: 20px;
-            width: 100%;
-            border: 1px solid rgba(0, 0, 0, 0.3);
-            border-radius: 4px;
-            text-align: center;
-        }
-        textarea {
-            height: 160px;
-            padding-top: 20px;
-            text-align: left;
-        }
-        #submitBtn {
-            height: 40px;
-            width: 100px;
-            background-color: transparent;
-            border: 1px solid black;
-            border-radius: 4px;
-        }
     }
     #caption {
         width: 300px;
@@ -343,7 +317,6 @@ h1, h2, h3 {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    height: 200px;
     background-image: url(../images/webdev_bg.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -404,9 +377,9 @@ h1, h2, h3 {
             }
         }
         .contact_modal {
-            grid-template-rows: 40vh 60vh;
+            grid-template-rows: 100vh;
             .heading {
-                margin: 200px 10% 40px;
+                margin: auto;
                 font-size: .9em;
                 h5 {
                     font-size: 1.3em;
@@ -491,7 +464,7 @@ h1, h2, h3 {
             }
         }
         .contact_modal {
-            grid-template-rows: 40vh 60vh;
+            grid-template-rows: 100vh;
             .heading {
                 margin: 200px 21.5% 40px;
                 font-size: .9em;
@@ -523,7 +496,7 @@ h1, h2, h3 {
         height: 80px;
         .links {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             grid-template-rows: 1fr;
             .social {
                 width: 100px;
